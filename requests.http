@@ -1,0 +1,116 @@
+
+POST  http://18.117.89.140:3300/api/admin/addProduct
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGE2NWNlYjU2YzAyMjMyNDA3MmI4ZTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiYTk3ZjBiZDhjMTM3MjE3ZWE0MDVkN2RiODBhMjEwOWYiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MjE3ODY2MjgsImV4cCI6MTYyMzQ5NDgxNTIzOX0.ZMXhiXVojpi1yYN8D0lF9NSRgHTfxdei2qh3JsxEp6I
+
+{
+    "name": "One Plus Powerbank",
+    "description": "10000 MHz One plus powerbank.",
+    "price": "10",
+    "sku": "prod",
+    "images": [
+        "https://static.bhphoto.com/images/images500x500/acellories_pb500_b_10_000_mah_power_bank_1551177473_1462220.jpg", 
+        "https://static.bhphoto.com/images/images500x500/acellories_pb500_b_10_000_mah_power_bank_1551177473_1462220.jpg", 
+        "https://static.bhphoto.com/images/images500x500/acellories_pb500_b_10_000_mah_power_bank_1551177473_1462220.jpg"
+    ],
+    "category_id": "60b5f20022d09b163ce41a29",
+    "stock": "10",
+    "country": "India",
+    "country_image": "images/1.jpg"
+}
+
+###
+
+POST http://18.117.89.140:3300/api/admin/addCategory
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGE2NWNlYjU2YzAyMjMyNDA3MmI4ZTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiYTk3ZjBiZDhjMTM3MjE3ZWE0MDVkN2RiODBhMjEwOWYiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MjE3ODY2MjgsImV4cCI6MTYyMzQ5NDgxNTIzOX0.ZMXhiXVojpi1yYN8D0lF9NSRgHTfxdei2qh3JsxEp6I
+
+{
+    "name": "Home & Kitchen"
+}
+
+
+### 
+
+POST http://localhost:3300/api/admin/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123abc0."
+}
+
+
+### 
+
+POST http://localhost:3300/api/auth/register
+Content-Type: application/json
+
+{
+    "full_name": "harikrushn kanani",
+    "email": "user@gmail.com",
+    "password": "123abc0."
+}
+
+###
+
+POST http://18.117.89.140:3300/api/auth/register
+Content-Type: application/json
+
+{
+    "full_name": "Harry Kanani",
+    "email": "hkanani191@gmail.com",
+    "password": "123abc0."
+}
+
+###
+
+POST http://18.117.89.140:3300/api/auth/register
+Content-Type: application/json
+
+{
+    "email": "user1@gmail.com",
+    "password": "user1pass",
+    "full_name": "harikanani"
+}
+
+
+###
+
+PUT http://127.0.0.1:3300/api/admin/productUpdate/60aa843fc8ee672eeca03833
+Content-Type: application/json
+
+{
+    "name": "Updated Product",
+    "description": "lorem issupe"
+}
+
+
+###
+
+GET http://localhost:3300/api/admin/productList
+
+###
+PUT http://localhost:3300/api/admin/updateCategory/60aa80215559ff2cd4358c2d
+Content-Type: application/json
+
+{
+    "name": "Home & Kitchen"
+}
+
+### Product Details
+# GET http://18.117.89.140:3300/api/product/60b5f4a522d09b163ce41a2b
+GET http://localhost:3300/api/product/60b5f4a522d09b163ce41a2b
+
+
+### get cart items data
+POST http://localhost:3300/api/products/cart-items
+Content-Type: application/json
+
+{
+    "ids": [
+        "60b5f5f122d09b163ce41a2e",
+        "60b600e722d09b163ce41a33"
+    ]
+}
+
